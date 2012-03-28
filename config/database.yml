@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   database: autohome_development
   username: autohome
-  postgresql: autohome
+  password: autohome
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -11,10 +11,10 @@ test:
   adapter: postgresql
   database: autohome_test
   username: autohome
-  postgresql: autohome
+  password: autohome
 
 production:
   adapter: postgresql
   database: autohome_production
   username: autohome
-  postgresql: autohome
+  password: autohome
