@@ -14,7 +14,7 @@
   <tr>
     <td><%= action_set.name %></td>
     <td><%= action_set.description %></td>
-    <td><%= action_set.user_id %></td>
+    <td><%= link_to action_set.user.name, user_path(action_set.user) %></td>
     <td><%= link_to 'Show', action_set %></td>
     <td><%= link_to 'Edit', edit_action_set_path(action_set) %></td>
     <td><%= link_to 'Destroy', action_set, :confirm => 'Are you sure?', :method => :delete %></td>

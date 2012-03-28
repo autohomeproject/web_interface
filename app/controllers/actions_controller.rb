@@ -40,7 +40,7 @@ class ActionsController < ApplicationController
   # POST /actions
   # POST /actions.json
   def create
-    @action = Action.new(params[:action])
+    @action = Action.new(params[:action_data])
 
     respond_to do |format|
       if @action.save

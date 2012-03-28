@@ -1,4 +1,5 @@
-<%= form_for(@action) do |f| %>
+<!--BEWARE! RAILS TRICKERY AFOOT! The form is made into :action_data instead of :action because the :action symbol is a reserved paramter in the params hash.-->
+<%= form_for(@action, :as => :action_data) do |f| %>
   <% if @action.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@action.errors.count, "error") %> prohibited this action from being saved:</h2>
@@ -12,8 +13,12 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :action_set_id %><br />
+    <%= collection_select :action_data, :action_set_id, ActionSet.all, :id, :name, { :prompt => 'Please Select Action Set' } %>
+  </div>
+  <div class="field">
     <%= f.label :device_id %><br />
-    <%= f.number_field :device_id %>
+    <%= select :action_data, :device_id, Device.all.collect{ |d| [d.name, d.id] }, {:prompt => 'Please Select Device'} %>
   </div>
   <div class="field">
     <%= f.label :value %><br />

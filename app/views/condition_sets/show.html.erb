@@ -12,7 +12,7 @@
 
 <p>
   <b>User:</b>
-  <%= @condition_set.user_id %>
+  <%= link_to @condition_set.user.name, user_path(@condition_set.user) %>
 </p>
 
 

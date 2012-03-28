@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Condition set:</b>
+  <%= link_to @condition.condition_set.name, condition_set_path(@condition.condition_set) %>
+</p>
+
+<p>
   <b>Device:</b>
   <%= link_to @condition.device.name, device_path(@condition.device) %>
 </p>

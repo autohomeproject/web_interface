@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Action set:</b>
+  <%= link_to @action.action_set.name, action_set_path(@action.action_set) %>
+</p>
+<p>
   <b>Device:</b>
-  <%= link_to @action.device.name, device_link(@action.device) %>
+  <%= link_to @action.device.name, device_path(@action.device) %>
 </p>
 
 <p>

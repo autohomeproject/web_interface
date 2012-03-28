@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Condition set</th>
     <th>Device</th>
     <th>Comparison</th>
     <th>Value</th>
@@ -13,6 +14,7 @@
 
 <% @conditions.each do |condition| %>
   <tr>
+    <td><%= link_to condition.condition_set.name, condition_set_path(condition.condition_set) %></td>
     <td><%= link_to condition.device.name, device_path(condition.device) %></td>
     <td><%= condition.comparison_string %></td>
     <td><%= condition.value.to_s + " " + condition.device.device_type.unit %></td>

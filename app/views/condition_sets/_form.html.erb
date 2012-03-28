@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= collection_select :condition_set, :user_id, User.all, :id, :name, { :prompt => 'Please Select User' } %>
   </div>
   <div class="actions">
     <%= f.submit %>

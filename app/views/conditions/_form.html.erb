@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :condition_set_id %><br />
+    <%= collection_select :condition, :condition_set_id, ConditionSet.all, :id, :name, {:prompt => 'Please Select Device'} %>
+  </div>
   <div class="field">
     <%= f.label :device_id %><br />
     <%= select :condition, :device_id, Device.all.collect{ |d| [d.name, d.id] }, {:prompt => 'Please Select Device'} %>
