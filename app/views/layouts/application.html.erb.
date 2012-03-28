@@ -1,0 +1,251 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <!-- DNS prefetch -->
+  <link rel=dns-prefetch href="//fonts.googleapis.com">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title><%= full_title(yield(:title)) %> | autoHome - The simple home automation solution</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  
+  <!-- CSS: implied media=all -->
+    <%= stylesheet_link_tag    "application" %>
+  <!-- end CSS-->
+ 
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+
+</head>
+
+<body id="top">
+
+  <!-- Begin of #container -->
+  <div id="container">
+  	<!-- Begin of #header -->
+    <div id="header-surround"><header id="header">
+    	
+    	<!-- Place your logo here -->
+		<img src="images/logo.png" alt="Grape" class="logo">
+		
+		<!-- Divider between info-button and the toolbar-icons -->
+		<div class="divider-header divider-vertical"></div>
+		
+		
+		
+		<!-- Begin from Toolbox -->
+		<ul class="toolbox-header">
+			<!-- First entry -->
+			<li>
+				<a rel="tooltip" title="Write a Message" class="toolbox-action" href="javascript:void(0);"><span class="i-24-plus"></span></a>
+				<div class="toolbox-content">
+					
+					<!-- Box -->
+					<div class="block-border">
+						<div class="block-header small">
+							<h1>A Device</h1>
+						</div>
+						<form id="write-message-form" class="block-content form" action="" method="post">							
+							<p class="inline-mini-label">
+								<label for="recipient">Recipient</label>
+								<input type="text" name="recipient" class="required">
+							</p>
+							<p class="inline-mini-label">
+								<label for="subject">Subject</label>
+								<input type="text" name="subject">
+							</p>
+							<div class="_100">
+								<p class="no-top-margin"><label for="message">Message</label><textarea id="message" name="message" class="required" rows="5" cols="40"></textarea></p>
+							</div>
+							
+							<div class="clear"></div>
+							
+							<!-- Buttons with actionbar  -->
+							<div class="block-actions">
+								<ul class="actions-left">
+									<li><a class="close-toolbox button red" id="reset2" href="javascript:void(0);">Cancel</a></li>
+								</ul>
+								<ul class="actions-right">
+									<li><input type="submit" class="button" value="Send Message"></li>
+								</ul>
+							</div> <!--! end of #block-actions -->
+						</form>
+					</div> <!--! end of box -->
+					
+				</div>
+			</li> <!--! end of first entry -->
+			<li>
+				<a rel="tooltip" title="Create a User" class="toolbox-action" href="javascript:void(0);"><span class="i-24-user-business"></span></a>
+				<div class="toolbox-content">
+					
+					<!-- Box -->
+					<div class="block-border">
+						<div class="block-header small">
+							<h1>Create a User</h1>
+						</div>
+						<form id="create-user-form" class="block-content form" action="" method="post">
+							<div class="_100">
+								<p><label for="username">Username</label><input id="username" name="username" class="required" type="text" value="" /></p>
+							</div>
+							<div class="_50">
+								<p class="no-top-margin"><label for="firstname">Firstname</label><input id="firstname" name="firstname" class="required" type="text" value="" /></p>
+							</div>
+							<div class="_50">
+								<p class="no-top-margin"><label for="lastname">Lastname</label><input id="lastname" name="lastname" class="required" type="text" value="" /></p>
+							</div>
+							<div class="clear"></div>
+							
+							<!-- Buttons with actionbar  -->
+							<div class="block-actions">
+								<ul class="actions-left">
+									<li><a class="close-toolbox button red" id="reset" href="javascript:void(0);">Cancel</a></li>
+								</ul>
+								<ul class="actions-right">
+									<li><input type="submit" class="button" value="Create the User"></li>
+								</ul>
+							</div> <!--! end of #block-actions -->
+						</form>
+					</div> <!--! end of box -->
+					
+				</div>
+			<!-- Second entry -->
+
+			</li> <!--! end of second entry -->
+			
+			
+		</ul>
+		
+		<!-- Begin of #user-info -->
+		<div id="user-info">
+			<p>
+				<span class="messages">Hello <a href="javascript:void(0);">Administrator</a></span>
+				<a href="javascript:void(0)" class="toolbox-action button">Settings</a> <a href="javascript:void(0);" class="button red">Logout</a>
+			</p>
+		</div> <!--! end of #user-info -->
+		
+    </header></div> <!--! end of #header -->
+    
+    <div class="fix-shadow-bottom-height"></div>
+	
+	<!-- Begin of Sidebar -->
+    <aside id="sidebar">
+    	
+    	<!-- Search -->
+    	<div id="search-bar">
+			<form id="search-form" name="search-form" action="search.php" method="post">
+				<input type="text" id="query" name="query" value="" autocomplete="off" placeholder="Search">
+			</form>
+		</div> <!--! end of #search-bar -->
+		
+		<!-- Begin of #login-details -->
+		<section id="login-details">
+    		<img class="img-left framed" src="images/avatar_small.png" alt="Hello Admin">
+    		<h3>Logged in as</h3>
+    		<h2><a class="user-button" href="javascript:void(0);">Administrator&nbsp;<span class="arrow-link-down"></span></a></h2>
+    		<ul class="dropdown-username-menu">
+    			<li><a href="#">Profile</a></li>
+    			<li><a href="#">Settings</a></li>
+    			<li><a href="#">Logout</a></li>
+    		</ul>
+    		
+    		<div class="clearfix"></div>
+  		</section> <!--! end of #login-details -->
+    	
+    	<!-- Begin of Navigation -->
+    	<nav id="nav">
+	    	<ul class="menu collapsible shadow-bottom">
+	    		<li><a href="dashboard.html" class="current"><img src="images/dashboard.png">Dashboard</a></li>
+                <li><a href="status.html"><img src="images/compile.png">Status</a></li>	
+                <li><a href="alerts.html"><img src="images/exclamation-shield.png">Alerts</a></li>
+                <li><a href="rooms.html"><img src="images/door.png">Rooms</a></li>
+                <li><a href="devices.html"><img src="images/robot.png">Attached Devices</a></li>	    		 <li><a href="schedule.html"><img src="images/calendar-month.png">Schedule</a></li>
+                <li><a href="users.html"><img src="images/user-white.png">Users</a></li>
+                 <li><a href="preferences.html"><img src="images/control-power.png">Prefereneces</a></li>
+	    	
+		<li><a href="log.html"><img src="images/application-terminal.png">Logs</a></li>    
+     <li><a href="backup.html"><img src="images/burn.png">Backup / Restore</a></li>	
+       
+	    	</ul>
+    	</nav> <!--! end of #nav -->
+    	
+    </aside> <!--! end of #sidebar -->
+    
+    <!-- Begin of #main -->
+    <div id="main" role="main">
+    	
+    	<!-- Begin of titlebar/breadcrumbs -->
+		<div id="title-bar">
+			<ul id="breadcrumbs">
+				<li><a href="/dashboard.html" title="Home"><span id="bc-home"></span></a></li>
+				<li class="no-hover"><%= full_title(yield(:title)) %></li>
+			</ul>
+		</div> <!--! end of #title-bar -->
+		
+		<div class="shadow-bottom shadow-titlebar"></div>
+		
+		<!-- Begin of #main-content -->
+		<div id="main-content">
+			<div class="container_12">
+			
+			<div class="grid_12">
+				<h1><%= full_title(yield(:title)) %></h1>
+				<%= yield %>
+			</div></div> <!--! end of #main-content -->
+  </div> <!--! end of #main -->
+
+    
+    <div id="footer"><div class="container_12">
+		<div class="grid_12"></div>
+		</div>
+    </div></div>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+   <%= javascript_include_tag "application" %>
+  
+  <script type="text/javascript">
+	$().ready(function() {
+		
+		/*
+		 * Form Validation
+		 */
+		$.validator.setDefaults({
+			submitHandler: function(e) {
+				$.jGrowl("Form was successfully submitted.", { theme: 'success' });
+				$(e).parent().parent().fadeOut();
+				v.resetForm();
+				v2.resetForm();
+				v3.resetForm();
+			}
+		});
+		var v = $("#create-user-form").validate();
+		jQuery("#reset").click(function() { v.resetForm(); $.jGrowl("User was not created!", { theme: 'error' }); });
+		
+		var v2 = $("#write-message-form").validate();
+		jQuery("#reset2").click(function() { v2.resetForm(); $.jGrowl("Message was not sent.", { theme: 'error' }); });
+		
+		var v3 = $("#create-folder-form").validate();
+		jQuery("#reset3").click(function() { v3.resetForm(); $.jGrowl("Folder was not created!", { theme: 'error' }); });
+		
+		var validateform = $("#validate-form").validate();
+		$("#reset-validate-form").click(function() {
+			validateform.resetForm();
+			$.jGrowl("Blogpost was not created.", { theme: 'error' });
+		});
+	});
+  </script>
+  <!-- end scripts-->
+  
+</body>
+</html>
