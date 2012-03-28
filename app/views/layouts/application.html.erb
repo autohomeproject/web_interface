@@ -39,7 +39,7 @@
   
   <!-- end CSS-->
  
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+   <%= javascript_include_tag "modernizr-2.0.6.min" %>
 
 </head>
 
@@ -51,7 +51,7 @@
     <div id="header-surround"><header id="header">
     	
     	<!-- Place your logo here -->
-		<img src="images/logo.png" alt="Grape" class="logo">
+		<img src="/images/logo.png" alt="Grape" class="logo">
 		
 		<!-- Divider between info-button and the toolbar-icons -->
 		<div class="divider-header divider-vertical"></div>
@@ -164,7 +164,7 @@
 		
 		<!-- Begin of #login-details -->
 		<section id="login-details">
-    		<img class="img-left framed" src="images/avatar_small.png" alt="Hello Admin">
+    		<img class="img-left framed" src="/images/avatar_small.png" alt="Hello Admin">
     		<h3>Logged in as</h3>
     		<h2><a class="user-button" href="javascript:void(0);">Administrator&nbsp;<span class="arrow-link-down"></span></a></h2>
     		<ul class="dropdown-username-menu">
@@ -179,16 +179,16 @@
     	<!-- Begin of Navigation -->
     	<nav id="nav">
 	    	<ul class="menu collapsible shadow-bottom">
-	    		<li><a href="dashboard.html" class="current"><img src="images/dashboard.png">Dashboard</a></li>
-                <li><a href="status.html"><img src="images/compile.png">Status</a></li>	
-                <li><a href="alerts.html"><img src="images/exclamation-shield.png">Alerts</a></li>
-                <li><a href="rooms.html"><img src="images/door.png">Rooms</a></li>
-                <li><a href="devices.html"><img src="images/robot.png">Attached Devices</a></li>	    		 <li><a href="schedule.html"><img src="images/calendar-month.png">Schedule</a></li>
-                <li><a href="users.html"><img src="images/user-white.png">Users</a></li>
-                 <li><a href="preferences.html"><img src="images/control-power.png">Prefereneces</a></li>
+	    		<li><a href="dashboard.html" class="current"><img src="/images/dashboard.png">Dashboard</a></li>
+                <li><a href="/status.html"><img src="/images/compile.png">Status</a></li>	
+                <li><a href="/alerts.html"><img src="/images/exclamation-shield.png">Alerts</a></li>
+                <li><a href="/rooms.html"><img src="/images/door.png">Rooms</a></li>
+                <li><a href="/devices.html"><img src="/images/robot.png">Attached Devices</a></li>	    		 <li><a href="schedule.html"><img src="/images/calendar-month.png">Schedule</a></li>
+                <li><a href="/users.html"><img src="/images/user-white.png">Users</a></li>
+                 <li><a href="/preferences.html"><img src="/images/control-power.png">Prefereneces</a></li>
 	    	
-		<li><a href="log.html"><img src="images/application-terminal.png">Logs</a></li>    
-     <li><a href="backup.html"><img src="images/burn.png">Backup / Restore</a></li>	
+		<li><a href="/log.html"><img src="/images/application-terminal.png">Logs</a></li>    
+     <li><a href="/backup.html"><img src="/images/burn.png">Backup / Restore</a></li>	
        
 	    	</ul>
     	</nav> <!--! end of #nav -->
@@ -227,7 +227,19 @@
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery-1.6.2.min.js" %>
+  <%= javascript_include_tag "plugins" %> <!-- lightweight wrapper for consolelog, optional -->
+  <%= javascript_include_tag "jquery-ui-1.8.15.custom.min" %> <!-- jQuery UI -->
+  <%= javascript_include_tag "jquery.notifications" %> <!-- Notifications  -->
+  <%= javascript_include_tag "jquery.uniform.min" %> <!-- Uniform (Look & Feel from forms) -->
+  <%= javascript_include_tag "jquery.validate.min" %> <!-- Validation from forms -->
+  <%= javascript_include_tag "jquery.dataTables.min" %> <!-- Tables -->
+  <%= javascript_include_tag "jquery.tipsy" %> <!-- Tooltips -->
+  <%= javascript_include_tag "excanvas" %> <!-- Charts -->
+  <%= javascript_include_tag "jquery.visualize" %> <!-- Charts -->
+  <%= javascript_include_tag "jquery.slidernav.min" %> <!-- Contact List -->
+  <%= javascript_include_tag "common" %> <!-- Generic functions -->
+  <%= javascript_include_tag "script" %> <!-- Generic scripts -->
   
   <script type="text/javascript">
 	$().ready(function() {
