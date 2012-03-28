@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Autohome::Application.load_tasks
+Autocode::Application.load_tasks

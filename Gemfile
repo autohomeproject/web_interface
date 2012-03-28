@@ -5,9 +5,8 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'sqlite3'
 
-gem 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,7 +18,6 @@ end
 
 gem 'jquery-rails'
 
-gem 'therubyracer', :require => 'v8'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -30,5 +28,9 @@ gem 'therubyracer', :require => 'v8'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug'
+# gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
