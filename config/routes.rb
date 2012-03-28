@@ -22,7 +22,7 @@ Autohome::Application.routes.draw do
   resources :devices
 
   match '/dashboard/:action' => 'dashboard'
- match '/dashboard' => 'dashboard#index'
+  match '/dashboard' => 'dashboard#index'
  #match '/' => 'dashboard#index'
 
   # The priority is based upon order of creation:
