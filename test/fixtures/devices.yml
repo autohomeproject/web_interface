@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  device_type_id: 1
+  location_id: 1
+  active: false
+  default_value: 1.5
+
+two:
+  name: MyString
+  device_type_id: 1
+  location_id: 1
+  active: false
+  default_value: 1.5

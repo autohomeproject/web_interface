@@ -1,0 +1,29 @@
+<h1>Listing actions</h1>
+
+<table>
+  <tr>
+    <th>Device</th>
+    <th>Value</th>
+    <th>Duration</th>
+    <th>Json data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @actions.each do |action| %>
+  <tr>
+    <td><%= link_to action.device.name, device_link(action.device) %></td>
+    <td><%= action.value %></td>
+    <td><%= action.duration.to_s + ' ' + action.device.device_type.unit %></td>
+    <td><%= action.json_data %></td>
+    <td><%= link_to 'Show', action %></td>
+    <td><%= link_to 'Edit', edit_action_path(action) %></td>
+    <td><%= link_to 'Destroy', action, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Action', new_action_path %>

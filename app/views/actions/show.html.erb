@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device:</b>
+  <%= link_to @action.device.name, device_link(@action.device) %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @action.value.to_s + ' ' + @action.device.device_type.unit %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @action.duration %>
+</p>
+
+<p>
+  <b>Json data:</b>
+  <%= @action.json_data %>
+</p>
+
+
+<%= link_to 'Edit', edit_action_path(@action) %> |
+<%= link_to 'Back', actions_path %>

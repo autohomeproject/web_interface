@@ -1,0 +1,2 @@
+module DevicePermissionsHelper
+end

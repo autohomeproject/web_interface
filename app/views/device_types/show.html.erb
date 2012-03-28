@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @device_type.name %>
+</p>
+
+<p>
+  <b>Module name:</b>
+  <%= @device_type.module_name %>
+</p>
+
+<p>
+  <b>Data type:</b>
+  <%= @device_type.data_type %>
+</p>
+<p>
+  <b>Data flow:</b>
+  <%= @device_type.data_flow %>
+</p>
+<p>
+  <b>Unit:</b>
+  <%= @device_type.unit %>
+</p>
+<%= link_to 'Edit', edit_device_type_path(@device_type) %> |
+<%= link_to 'Back', device_types_path %>

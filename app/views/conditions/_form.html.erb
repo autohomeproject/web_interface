@@ -1,0 +1,36 @@
+<%= form_for(@condition) do |f| %>
+  <% if @condition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@condition.errors.count, "error") %> prohibited this condition from being saved:</h2>
+
+      <ul>
+      <% @condition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :device_id %><br />
+    <%= select :condition, :device_id, Device.all.collect{ |d| [d.name, d.id] }, {:prompt => 'Please Select Device'} %>
+  </div>
+  <div class="field">
+    <%= f.label :comparison %><br />
+    <%=
+        opt = [ [ 'equal', 0 ], [ 'less than', 1 ], [ 'greater than', 2 ] ]
+        select :condition, :comparison, opt, {:prompt => 'Please Select Comparison'}
+    %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.number_field :value %>
+  </div>
+ <div class="field">
+    <%= f.label :json_data %><br />
+    <%= f.text_field :json_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

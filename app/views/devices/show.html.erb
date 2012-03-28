@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @device.name %>
+</p>
+
+<p>
+  <b>Device type:</b>
+  <%= link_to @device.device_type.name, room_path(@device.device_type) %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= link_to @device.location.room.name, room_path(@device.location.room) %>
+  - <%= link_to @device.location.name, location_path(@device.location) %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @device.active %>
+</p>
+
+<p>
+  <b>Default value:</b>
+  <%= @device.default_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @device_permission.user_id %>
+</p>
+
+<p>
+  <b>Device:</b>
+  <%= @device_permission.device_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_permission_path(@device_permission) %> |
+<%= link_to 'Back', device_permissions_path %>

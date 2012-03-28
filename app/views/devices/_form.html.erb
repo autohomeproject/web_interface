@@ -1,0 +1,42 @@
+<%= form_for(@device) do |f| %>
+  <% if @device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@device.errors.count, "error") %> prohibited this device from being saved:</h2>
+
+      <ul>
+      <% @device.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :device_type_id %><br />
+    <%=
+        select :device, :device_type_id, DeviceType.all.collect { |dt| [ dt.name, dt.id ] }.sort, {:prompt => 'Select Device Type'}
+    %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%=
+        opt = Location.all.collect do |l| [ "#{l.room.name} - #{l.name}", l.id ] end
+        select :device, :location_id, opt.sort, {:prompt => 'Select Location'}
+    %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :default_value %><br />
+    <%= f.number_field :default_value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

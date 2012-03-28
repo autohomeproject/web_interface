@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  device_id: 1
+  value: 1.5
+  comparison: 1
+  json_data: MyString
+
+two:
+  device_id: 1
+  value: 1.5
+  comparison: 1
+  json_data: MyString

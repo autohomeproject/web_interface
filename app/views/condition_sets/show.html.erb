@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @condition_set.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @condition_set.description %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @condition_set.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_condition_set_path(@condition_set) %> |
+<%= link_to 'Back', condition_sets_path %>

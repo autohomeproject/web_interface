@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device:</b>
+  <%= link_to @condition.device.name, device_path(@condition.device) %>
+</p>
+
+<p>
+  <b>Comparison:</b>
+  <%= @condition.comparison_string %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @condition.value.to_s + " " + @condition.device.device_type.unit %>
+</p>
+
+<p>
+  <b>Json data:</b>
+  <%= @condition.json_data %>
+</p>
+
+
+<%= link_to 'Edit', edit_condition_path(@condition) %> |
+<%= link_to 'Back', conditions_path %>
