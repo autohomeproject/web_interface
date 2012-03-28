@@ -1,4 +1,30 @@
-Autocode::Application.routes.draw do
+Autohome::Application.routes.draw do
+  resources :users
+
+  resources :device_permissions
+
+  resources :rule_sets
+
+  resources :action_sets
+
+  resources :condition_sets
+
+  resources :actions
+
+  resources :conditions
+
+  resources :rooms
+
+  resources :locations
+
+  resources :device_types
+
+  resources :devices
+
+  match '/dashboard/:action' => 'dashboard'
+  match '/dashboard' => 'dashboard#index'
+  match '/' => 'dashboard#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

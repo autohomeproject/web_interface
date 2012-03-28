@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+Autocode::Application.routes.draw do
+=======
 Autohome::Application.routes.draw do
   resources :users
 
@@ -21,6 +24,11 @@ Autohome::Application.routes.draw do
 
   resources :devices
 
+  match '/dashboard/:action' => 'dashboard'
+  match '/dashboard' => 'dashboard#index'
+  match '/' => 'dashboard#index'
+
+>>>>>>> 40e1dde4ff056f6198d608f0879d70bfe2cb0275
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
