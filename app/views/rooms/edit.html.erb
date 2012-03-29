@@ -4,7 +4,7 @@
 <div class="grid_4">
 	<div class="block-border">
 		<div class="block-header">
-			<span></span>
+			<p align="right" ><%= link_to 'Show', @room %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
 		</div>
 	
 	<%= render 'form' %>
@@ -12,6 +12,3 @@
 	</div>
 </div>
 
-
-<%= link_to 'Show', @room %> |
-<%= link_to 'Back', rooms_path %>
