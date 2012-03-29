@@ -1,4 +1,9 @@
 <!--BEWARE! RAILS TRICKERY AFOOT! The form is made into :action_data instead of :action because the :action symbol is a reserved paramter in the params hash.-->
+<div class="grid_4">
+        <div class="block-border">
+                <div class="block-header">
+                        <p align="right" ><%= link_to 'Show', @action %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
+                </div>
 <%= form_for(@action, :as => :action_data) do |f| %>
   <% if @action.errors.any? %>
     <div id="error_explanation">
@@ -36,3 +41,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+<div class="clear"></div>
+        </div>
+</div>
+
