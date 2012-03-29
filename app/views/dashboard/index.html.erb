@@ -11,19 +11,18 @@
 					<div class="block-header">
 						<h1>Active Rules</h1><span></span>
 
-
-
-
 					</div>
+					<div class="block-content">
 					
-						<div class="clear"></div>
-							<ul class="block-list with-icon">
-<% @active_rule_sets.each do |r| %>
+						<ul class="block-list with-icon">
+							<% @active_rule_sets.each do |r| %>
 							<li><%= link_to r.name, rule_set_path(r) %></li>
-<% end %>
+							<% end %>
 						</ul>					
 						
 						
+					</div>
+					
 				</div>
 			</div>
 
