@@ -3,7 +3,7 @@
                 <div class="block-header">
                         <p align="right" ><%= link_to 'Show', @rule_set %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
                 </div>
-<%= form_for(@rule_set, , :html => { :class => "block-content form"}) do |f| %>
+<%= form_for(@rule_set,  :html => { :class => "block-content form"}) do |f| %>
   <% if @rule_set.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@rule_set.errors.count, "error") %> prohibited this rule_set from being saved:</h2>
