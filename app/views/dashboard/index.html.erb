@@ -27,7 +27,7 @@
 					<div class="block-content">
 						<ul class="block-list with-icon">
 <% @active_devices.each do |d| %>
-							<li><%= d.name %></li>
+							<li><%= link_to d.name, device_path(d) %></li>
 <% end %>
 						</ul>
 					</div>
