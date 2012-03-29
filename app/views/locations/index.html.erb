@@ -1,26 +1,9 @@
+<% content_for :title do 'Locations' %>
 <h1>Listing locations</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Room</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @locations.each do |location| %>
-  <tr>
-    <td><%= location.name %></td>
-    <td><%= location.room.name %></td>
-    <td><%= location.description %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class="grid12">
+    <%= render "locations_table" %>
+</div>
 
 <br />
 

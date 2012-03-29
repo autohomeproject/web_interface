@@ -1,0 +1,34 @@
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Locations</h1>
+        </div>
+        <div class="block-content">
+            <table id="table-locations" class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Floor</th>
+                        <th>Description</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% @locations.each do |location| %>
+                    <tr>
+                        <td><%= location.name %></td>
+                        <td><%= location.room.name %></td>
+                        <td><%= location.description %></td>
+                        <td><%= link_to 'Show', location %></td>
+                        <td><%= link_to 'Edit', edit_room_path(location) %></td>
+                        <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+                    </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<% content_for :ready_js do "$('#table-locations').dataTable();" end %>

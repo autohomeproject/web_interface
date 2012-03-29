@@ -1,3 +1,10 @@
+
+
+<div class="grid_4">
+        <div class="block-border">
+                <div class="block-header">
+                        <p align="right" ><%= link_to 'Show', @room %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
+                </div>
 <%= form_for(@room, :html => { :class => "block-content form"} ) do |f| %>
   <% if @room.errors.any? %>
     <div id="error_explanation">
@@ -11,20 +18,31 @@
     </div>
   <% end %>
 
+  <br />
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <br /> <br />
   <div class="field">
     <%= f.label :floor %><br />
     <%= f.number_field :floor %>
   </div>
+  <br /> <br />
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <br /> <br />
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br />
 </div>
 <% end %>
+
+
+        <div class="clear"></div>
+        </div>
+</div>
+
