@@ -27,10 +27,9 @@
 					<div class="block-content">
 						<ul class="block-list with-icon">
 							<li>Table of Active Objects</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
-							<li>Lorem ipsum</li>
+<% @active_devices.each do |d| %>
+							<li><%= d.name %></li>
+<% end %>
 						</ul>
 					</div>
 					<div class="block-content dark-bg">
