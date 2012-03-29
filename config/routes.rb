@@ -23,6 +23,7 @@ Autohome::Application.routes.draw do
 
   match '/dashboard/:action' => 'dashboard'
   match '/dashboard' => 'dashboard#index'
+  match '/backup' => 'backup#index'
  #match '/' => 'dashboard#index'
 
   # The priority is based upon order of creation:
