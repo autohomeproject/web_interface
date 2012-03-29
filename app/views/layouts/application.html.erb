@@ -75,7 +75,7 @@
         
         <!-- Search -->
         <div id="search-bar">
-            <form id="search-form" name="search-form" action="search.php" method="post">
+            <form id="search-form" name="search-form" action="dashboard.html" method="post">
                 <input type="text" id="query" name="query" value="" autocomplete="off" placeholder="Search">
             </form>
         </div> <!--! end of #search-bar -->
@@ -99,7 +99,7 @@
        	    <li><a href="/rooms" <%= yield(:title) == "Rooms and Locations" ? 'class=current' : '' %>><img src="/images/door.png">Rooms & Locations</a></li>
             <li><a href="/rule_sets" <%= yield(:title) == "Configure Rules" ? 'class=current' : '' %>><img src="/images/calendar-month.png">Configure Rules</a></li>
             <li><a href="/users" <%= yield(:title) == "Users" ? 'class=current' : '' %>><img src="/images/user-white.png">Users</a></li>
-            <li><a href="/log"<%= yield(:title) == "Logs and Alerts" ? 'class=current' : '' %>><img src="/images/application-terminal.png">Logs & Alerts<span class="badge red">3</span></a></li>    
+            <li><a href="/log"<%= yield(:title) == "Logs and Alerts" ? 'class=current' : '' %>><img src="/images/application-terminal.png">Logs & Alerts<span class="badge red">2</span></a></li>    
             <li><a href="/backup" <%= yield(:title) == "Backup and Restore" ? 'class=current' : '' %>><img src="/images/burn.png">Backup / Restore</a></li>    
         </ul>	
         </nav> <!--! end of #nav -->
