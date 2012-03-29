@@ -270,8 +270,8 @@
 			$.jGrowl("Blogpost was not created.", { theme: 'error' });
 		});
 		
-		/* DataTables */
-		$('#table-example').dataTable();
+<%= yield(:ready_js) %>
+
 	});
   </script>
   <!-- end scripts-->
