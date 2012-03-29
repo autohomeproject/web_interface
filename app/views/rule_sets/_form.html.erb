@@ -16,16 +16,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :action_set_id %><br />
-    <%= f.number_field :action_set_id %>
-  </div>
-  <div class="field">
     <%= f.label :condition_set_id %><br />
-    <%= f.number_field :condition_set_id %>
+    <%= collection_select :rule_set, :condition_set_id, ConditionSet.all, :id, :name, {:prompt => 'Please Select Condition Set'} %>
+  </div>
+ <div class="field">
+    <%= f.label :action_set_id %><br />
+    <%= collection_select :rule_set, :action_set_id, ActionSet.all, :id, :name, {:prompt => 'Please Select Action Set'} %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= collection_select :rule_set, :user_id, User.all, :id, :name, {:prompt => 'Please Select User'} %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

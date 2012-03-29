@@ -6,18 +6,18 @@
 </p>
 
 <p>
-  <b>Action set:</b>
-  <%= @rule_set.action_set_id %>
+  <b>Condition set:</b>
+    <%= link_to @rule_set.condition_set.name, condition_set_path(@rule_set.condition_set) %>
 </p>
 
 <p>
-  <b>Condition set:</b>
-  <%= @rule_set.condition_set_id %>
+  <b>Action set:</b>
+    <%= link_to @rule_set.action_set.name, action_set_path(@rule_set.action_set) %>
 </p>
 
 <p>
   <b>User:</b>
-  <%= @rule_set.user_id %>
+    <%= link_to @rule_set.user.name, user_path(@rule_set.user) %>
 </p>
 
 <p>
