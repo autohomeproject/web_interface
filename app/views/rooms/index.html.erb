@@ -1,41 +1,10 @@
 <% content_for :title do 'Rooms and Locations' end %>
 <h1> Rooms & Locations</h1>
 <div class="grid_12">
-    <div class="block-border">
-        <div class="block-header">
-            <h1>List of Rooms</h1><span></span>
-        </div>
-        <div class="block-content">
-            <table id="table-rooms" class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Floor</th>
-                        <th>Description</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                <% @rooms.each do |room| %>
-                    <tr>
-                        <td><%= room.name %></td>
-                        <td><%= room.floor %></td>
-                        <td><%= room.description %></td>
-                        <td><%= link_to 'Show', room %></td>
-                        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-                        <td><%= link_to 'Destroy', room, :confirm => 'Are you sure?', :method => :delete %></td>
-                    </tr>
-                <% end %>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <%= render "rooms_table" %>
 </div>
 			
 <div class="clear height-fix"></div>
 
 <%= link_to 'New Room', new_room_path %>
 
-<% content_for :ready_js do "$('#table-rooms').dataTable();" end %>
