@@ -1,7 +1,15 @@
-<h1>Listing device_types</h1>
+<% content_for :title do 'Device Types' end %>
+<h1>Device Types</h1>
 
-<table>
-  <tr>
+<div class="grid_12">
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Device Types</h1><span></span>
+        </div>
+        <div class="block-content">
+            <table id="table-device_types" class="table">
+                <thead>
+                    <tr>
     <th>Name</th>
     <th>Module name</th>
     <th>Data type</th>
@@ -11,7 +19,8 @@
     <th></th>
     <th></th>
   </tr>
-
+</thead>
+<tbody>
 <% @device_types.each do |device_type| %>
   <tr>
     <td><%= device_type.name %></td>
@@ -24,8 +33,12 @@
     <td><%= link_to 'Destroy', device_type, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Device type', new_device_type_path %>
+</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+			
+<div class="clear height-fix"></div>
+<%= link_to 'New Device Type', new_device_type_path %>
+<% content_for :ready_js do "$('#table-device_types').dataTable();" end %>
