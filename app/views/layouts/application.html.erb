@@ -56,11 +56,8 @@
         <!-- Divider between info-button and the toolbar-icons -->
         <div class="divider-header divider-vertical"></div>
         
-        
-        
         <!-- Begin from Toolbox -->
      
-        
         <!-- Begin of #user-info -->
         <div id="user-info">
             <p>
@@ -96,15 +93,15 @@
         <!-- Begin of Navigation -->
         <nav id="nav">
         <ul class="menu collapsible shadow-bottom">
-            <li><a href="/dashboard" class="current"><img src="/images/dashboard.png">Dashboard</a></li>
-            <li><a href="/devices"><img src="/images/robot.png">Devices</a></li>
-            <li><a href="/device_types"><img src="/images/robot.png">Device Types</a></li>
-       	    <li><a href="/rooms"><img src="/images/door.png">Rooms & Locations</a></li>
-            <li><a href="/rule_sets"><img src="/images/calendar-month.png">Configure Rules</a></li>
-            <li><a href="/users"><img src="/images/user-white.png">Users</a></li>
-            <li><a href="/log"><img src="/images/application-terminal.png">Logs & Alerts</a></li>    
-            <li><a href="/backup"><img src="/images/burn.png">Backup / Restore</a></li>    
-        </ul>
+            <li><a href="/dashboard" <%= yield(:title) == "Dashboard" ? 'class=current' : '' %>><img src="/images/dashboard.png">Dashboard</a></li>
+            <li><a href="/devices" <%= yield(:title) == "Devices" ? 'class=current' : '' %>><img src="/images/robot.png">Devices</a></li>
+            <li><a href="/device_types" <%= yield(:title) == "Device Types" ? 'class=current' : '' %>><img src="/images/robot.png">Device Types</a></li>
+       	    <li><a href="/rooms" <%= yield(:title) == "Rooms and Locations" ? 'class=current' : '' %>><img src="/images/door.png">Rooms & Locations</a></li>
+            <li><a href="/rule_sets" <%= yield(:title) == "Configure Rules" ? 'class=current' : '' %>><img src="/images/calendar-month.png">Configure Rules</a></li>
+            <li><a href="/users" <%= yield(:title) == "Users" ? 'class=current' : '' %>><img src="/images/user-white.png">Users</a></li>
+            <li><a href="/log"<%= yield(:title) == "Logs and Alerts" ? 'class=current' : '' %>><img src="/images/application-terminal.png">Logs & Alerts</a></li>    
+            <li><a href="/backup" <%= yield(:title) == "Backup and Restore" ? 'class=current' : '' %>><img src="/images/burn.png">Backup / Restore</a></li>    
+        </ul>	
         </nav> <!--! end of #nav -->
         
     </aside> <!--! end of #sidebar -->
