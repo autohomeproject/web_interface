@@ -3,7 +3,8 @@
 <div class="grid_12">
     <div class="block-border">
         <div class="block-header">
-            <h1>List of Devices</h1><span></span>
+            <h1>List of Devices</h1>
+<p align="right" ><%= link_to 'Add New Device', new_device_path %>&nbsp;&nbsp;&nbsp;</p>
         </div>
         <div class="block-content">
             <table id="table-devices" class="table">
@@ -39,5 +40,4 @@
 </div>
 			
 <div class="clear height-fix"></div>
-<%= link_to 'New Device', new_device_path %>
 <% content_for :ready_js do "$('#table-devices').dataTable();" end %>
