@@ -1,0 +1,52 @@
+<% content_for :title do 'Backup and Restore' end %>
+
+    
+<div class="grid_12">
+    <h1>Back Up / Restore</h1><br></br>
+    <!--- Begin of backup-content-->
+    <div class="grid_5">
+        <div class="block-border">
+        <div class="block-header">
+        <h1>Back Up</h1>
+        </div>
+            <div class="block-content">
+                <p>Periodic back up is scheduled at 18:00 daily.</p>
+                <p>To perform manual back up, select a source below:</p>
+                <form name="myform" action="" method="POST"><hr></hr>                       
+                    <input type="radio" name="backup1" value="USB"> USB Storage<br></br>
+                    <input type="radio" name="backup1" value="Cloud"> Cloud Storage<br></br>
+                    <input type="radio" name="backup1" value="DVD"> DVD Image<br></br>              
+                </form>
+                <div class="block-actions">
+                                        
+                
+                </div>
+            </div>
+        </div>              
+        </div>
+        <!--- end of backup-content -->             
+        <!--- Begin of store-content-->
+        <div class="grid_5">
+        <div class="block-border">
+        <div class="block-header">
+        <h1>Restore</h1>
+        </div>
+            <div class="block-content">
+                <p>Choose a source to restore your system.</p>
+                <p>Please make sure the source is connected.</p>
+                <form name="myform" action="" method="POST"><hr></hr>                       
+                    <input type="radio" name="restore1" value="USB"> USB Storage<br></br>
+                    <input type="radio" name="restore1" value="Cloud"> Cloud Storage<br></br>
+                    <input type="radio" name="restore1" value="DVD"> DVD Image<br></br>             
+                </form>
+                <div class="block-actions">
+                                        
+                
+                </div>
+            </div>
+        </div>              
+        </div>
+        
+
+        <!--- end of restore-content -->
+</div>      
