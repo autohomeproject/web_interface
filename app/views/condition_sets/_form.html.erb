@@ -1,7 +1,7 @@
 <div class="grid_4">
         <div class="block-border">
                 <div class="block-header">
-                        <p align="right" ><%= link_to 'Show', @condition_set %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
+                        <p align="right" ><%= link_to 'Show', @condition_set %> | <%= link_to 'Back', rule_sets_path %>&nbsp;&nbsp;&nbsp;</p>
                 </div>
 <%= form_for(@condition_set, :html => { :class => "block-content form"}) do |f| %>
   <% if @condition_set.errors.any? %>
