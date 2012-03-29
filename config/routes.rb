@@ -23,6 +23,7 @@ Autohome::Application.routes.draw do
 
   match '/dashboard/:action' => 'dashboard'
   match '/dashboard' => 'dashboard#index'
+  match '/log' => 'log#index'
   match '/backup' => 'backup#index'
  #match '/' => 'dashboard#index'
 
