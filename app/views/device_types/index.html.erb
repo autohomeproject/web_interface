@@ -4,7 +4,8 @@
 <div class="grid_12">
     <div class="block-border">
         <div class="block-header">
-            <h1>List of Device Types</h1><span></span>
+            <h1>List of Device Types</h1>
+<p align="right" ><%= link_to 'Create New Device Type', new_device_type_path %>&nbsp;&nbsp;&nbsp;</p>
         </div>
         <div class="block-content">
             <table id="table-device_types" class="table">
@@ -40,5 +41,4 @@
 </div>
 			
 <div class="clear height-fix"></div>
-<%= link_to 'New Device Type', new_device_type_path %>
 <% content_for :ready_js do "$('#table-device_types').dataTable();" end %>
