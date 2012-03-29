@@ -1,13 +1,17 @@
 <% content_for :title do 'Edit Room ' + @room.name end %>
 
 <h1>Edit Room <%= @room.name %></h1>
-<div class="block-border">
-	<div class="block-header">
-		<span></span>
-	</div>
+<div class="grid_4">
+	<div class="block-border">
+		<div class="block-header">
+			<span></span>
+		</div>
 	
-<%= render 'form' %>
-<div class="clear"></div>
+	<%= render 'form' %>
+	<div class="clear"></div>
+	</div>
+</div>
+
 
 <%= link_to 'Show', @room %> |
 <%= link_to 'Back', rooms_path %>

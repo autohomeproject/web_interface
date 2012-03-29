@@ -1,5 +1,14 @@
 <% content_for :title do 'Add a Room' end %>
 <h1>Add a Room</h1>
+
+<div class="grid_4">
+	<div class="block-border">
+		<div class="block-header">
+			<span></span>
+		</div>
 <%= render 'form' %>
+<div class="clear"></div>
+	</div>
+</div>
 
 <%= link_to 'Back', rooms_path %>
