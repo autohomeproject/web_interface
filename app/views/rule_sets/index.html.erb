@@ -1,6 +1,6 @@
 <% content_for :title do 'Configure Rules' end %>
 <h1>Configure Rules</h1>
-
+<p align="right" ><%= link_to 'Create New Rule Set', new_rule_set_path %>&nbsp;&nbsp;&nbsp;</p>
 <div class="grid_12">
     <div class="block-border">
         <div class="block-header">
@@ -42,5 +42,4 @@
 </div>
 			
 <div class="clear height-fix"></div>
-<%= link_to 'New Rule Set', new_rule_set_path %>
 <% content_for :ready_js do "$('#table-rules').dataTable();" end %>
