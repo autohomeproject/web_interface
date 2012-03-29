@@ -1,4 +1,4 @@
-<%= form_for(@device_permission) do |f| %>
+<%= form_for(@device_permission, :html => { :class => "block-content form"}) do |f| %>
   <% if @device_permission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@device_permission.errors.count, "error") %> prohibited this device_permission from being saved:</h2>

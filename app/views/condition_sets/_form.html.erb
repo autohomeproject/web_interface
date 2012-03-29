@@ -3,7 +3,7 @@
                 <div class="block-header">
                         <p align="right" ><%= link_to 'Show', @condition_set %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
                 </div>
-<%= form_for(@condition_set) do |f| %>
+<%= form_for(@condition_set, :html => { :class => "block-content form"}) do |f| %>
   <% if @condition_set.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@condition_set.errors.count, "error") %> prohibited this condition_set from being saved:</h2>

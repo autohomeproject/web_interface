@@ -1,10 +1,9 @@
-<!--BEWARE! RAILS TRICKERY AFOOT! The form is made into :action_data instead of :action because the :action symbol is a reserved paramter in the params hash.-->
 <div class="grid_4">
         <div class="block-border">
                 <div class="block-header">
                         <p align="right" ><%= link_to 'Show', @action %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
                 </div>
-<%= form_for(@action, :as => :action_data) do |f| %>
+<%= form_for(@action, :as => :action_data, :html => { :class => "block-content form"}) do |f| %>
   <% if @action.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@action.errors.count, "error") %> prohibited this action from being saved:</h2>
