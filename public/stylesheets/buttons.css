@@ -17,7 +17,7 @@
  * ================================================== */
 
 .button {
-	background: url("../images/button-blue.png") repeat-x scroll 0 0 #2d5672;
+	background: url("/images/button-blue.png") repeat-x scroll 0 0 #2d5672;
 	border-radius: 20px 20px 20px 20px;
 	border-style: solid;
 	border-width: 1px;
@@ -35,18 +35,18 @@ input[type="submit"].button {
 }
 
 .button:hover {
-	background: url("../images/button-blue.png") repeat-x scroll 0 -24px #4d7690;
+	background: url("/images/button-blue.png") repeat-x scroll 0 -24px #4d7690;
 	color: #fff !important;
 	text-decoration: none;
 }
 
 .button:active {
-	background: url("../images/button-blue.png") repeat-x scroll 0 -48px #6290b2;
+	background: url("/images/button-blue.png") repeat-x scroll 0 -48px #6290b2;
 }
 
-.button.red { background: url("../images/button-red.png") repeat-x scroll 0 0 #6b352b; }
-.button.red:hover { background: url("../images/button-red.png") repeat-x scroll 0 -24px #834a3f; }
-.button.red:active { background: url("../images/button-red.png") repeat-x scroll 0 -48px #a85f51; }
+.button.red { background: url("/images/button-red.png") repeat-x scroll 0 0 #6b352b; }
+.button.red:hover { background: url("/images/button-red.png") repeat-x scroll 0 -24px #834a3f; }
+.button.red:active { background: url("/images/button-red.png") repeat-x scroll 0 -48px #a85f51; }
 
 
 
@@ -59,7 +59,7 @@ input[type="submit"].button {
  * ================================================== */
 
 .btn-info {
-	background: url("../images/info.png") no-repeat scroll 0 0 transparent;
+	background: url("/images/info.png") no-repeat scroll 0 0 transparent;
 	height: 20px;
 	width: 20px;
 	position: relative;
@@ -73,12 +73,12 @@ input[type="submit"].button {
 }
 
 .arrow-link-down {
-	background: url("../images/arrow-down.png") no-repeat scroll center right transparent;
+	background: url("/images/arrow-down.png") no-repeat scroll center right transparent;
 	padding-right: 20px;
 }
 
 .arrow-link-down:hover {
-	background: url("../images/arrow-down-hover.png") no-repeat scroll center right transparent;
+	background: url("/images/arrow-down-hover.png") no-repeat scroll center right transparent;
 }
 
 
@@ -91,7 +91,7 @@ input[type="submit"].button {
  * ================================================== */
 
 .user-button {
-	background: url("../images/shine-effect.png") repeat-x scroll top left #344655;
+	background: url("/images/shine-effect.png") repeat-x scroll top left #344655;
 	border: 1px solid #000;
 	border-radius: 3px 3px 3px 3px;
 	position: relative;
@@ -101,7 +101,7 @@ input[type="submit"].button {
 }
 
 .user-button:hover {
-	background: url("../images/shine-effect.png") repeat-x scroll top left #495f71;
+	background: url("/images/shine-effect.png") repeat-x scroll top left #495f71;
 }
 
 .user-button:active {
@@ -123,7 +123,7 @@ input[type="submit"].button {
  * ================================================== */
 
 #footer a.top {
-	background: url("../images/top-hover.png") no-repeat scroll 0 0 transparent;
+	background: url("/images/top-hover.png") no-repeat scroll 0 0 transparent;
 	height: 48px;
 	width: 48px;
 	display: block;

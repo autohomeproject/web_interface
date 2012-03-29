@@ -36,14 +36,14 @@
 }
 
 #container > #header-surround > #header > ul.toolbox-header li a.toolbox-action {
-	background: url("../images/header-bg.png") repeat-x scroll top left transparent;
+	background: url("/images/header-bg.png") repeat-x scroll top left transparent;
 	height: 43px;
 	width: 45px;
 	float: left;
 }
 
 #container > #header-surround > #header > ul.toolbox-header li a.toolbox-action:hover {
-	background: url("../images/toolbox-hover.png") no-repeat scroll top left transparent;
+	background: url("/images/toolbox-hover.png") no-repeat scroll top left transparent;
 }
 
 #container > #header-surround > #header > ul.toolbox-header li span {
@@ -55,7 +55,7 @@
 }
 
 #container > #header-surround > #header > ul.toolbox-header a.active {
-	background: url("../images/toolbox-hover.png") no-repeat scroll top left transparent;
+	background: url("/images/toolbox-hover.png") no-repeat scroll top left transparent;
 }
 
 
@@ -115,14 +115,14 @@ ul.dropdown-username-menu {
 	width: 160px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 	
-	background: url("../img/misc/shine-effect.png") repeat-x scroll 0 0 rgba(33, 40, 44, 0.7);
+	background: url("/images/shine-effect.png") repeat-x scroll 0 0 rgba(33, 40, 44, 0.7);
 	border: 1px solid #25333c;
 	border-radius: 5px 5px 5px 5px;
 	padding: 4px;
 }
 
 ul.dropdown-username-menu li {
-	background: url("../images/dropdown-username-menu-bg.png") repeat-x scroll top left #ebebeb;
+	background: url("/images/dropdown-username-menu-bg.png") repeat-x scroll top left #ebebeb;
 	min-height: 25px;
 	border-top: 1px solid #848b93;
 	line-height: 25px;
@@ -130,7 +130,7 @@ ul.dropdown-username-menu li {
 }
 
 ul.dropdown-username-menu li:hover {
-	background: url("../images/dropdown-username-menu-bg-hover.png") repeat-x scroll top left #b2b7bb;
+	background: url("/images/dropdown-username-menu-bg-hover.png") repeat-x scroll top left #b2b7bb;
 }
 
 ul.dropdown-username-menu li a {
@@ -167,7 +167,7 @@ ul.dropdown-username-menu li a:hover {
 }
 
 #breadcrumbs li:hover {
-	background: url("../images/bc-shine.png") no-repeat scroll bottom center transparent;
+	background: url("/images/bc-shine.png") no-repeat scroll bottom center transparent;
 }
 
 #breadcrumbs li.no-hover {
@@ -176,14 +176,14 @@ ul.dropdown-username-menu li a:hover {
 
 #breadcrumbs a {
 	height: 40px;
-	background: url("../images/bc-seperator.png") no-repeat scroll top right transparent;
+	background: url("/images/bc-seperator.png") no-repeat scroll top right transparent;
     padding-right: 20px;
     text-decoration: none;
     display: block;
 }
 
 #bc-home {
-	background-image: url("../images/home-hover.png");
+	background-image: url("/images/home-hover.png");
 	background-position: 0px 5px;
 	display: block;
 	height: 32px;
@@ -244,7 +244,7 @@ ul.shortcut-list {
 }
 
 ul.shortcut-list li {
-	background: url("../images/shortcut-list-bg.png") repeat-x scroll top left #d3d3d3;
+	background: url("/images/shortcut-list-bg.png") repeat-x scroll top left #d3d3d3;
 	border: 1px solid #bcbcbc;
 	float: left;
 	overflow: hidden;
@@ -297,15 +297,15 @@ ul.shortcut-list li:hover a {
 .slider-content ul li { float: left; width: 100%; }
 .slider-content ul ul li a { padding: 5px 10px; display: block; border-bottom: 1px solid #f3f3f3; text-transform: capitalize; }
 .slider-content ul ul li a:hover { background: #f3faff; border-color: #d5ebf9; }
-.slider-content .title { padding: 5px 0; text-indent: 10px; background: url("../images/contactlist-bg.png") repeat-x scroll top left #d9d9d9; border-top: 1px solid #bbbbbb; border-bottom: 1px solid #bbbbbb; color: #585858; width: 100%; float: left; font-weight: bold; text-transform: uppercase; }
-.slider-content .selected .title { background: url("../images/contactlist-selected-bg.png") repeat-x scroll top left #d9d9d9; color: #fff; border-top: 1px solid #2d4259; border-bottom: 1px solid #2d4259; }
-.slider .slider-nav { position: absolute; right: 0; top: 0; margin-top: 2px; background: url("../images/contactlist-nav-bg.png") repeat-x scroll top left #e1e1e1; min-height: 150px; border-left: 1px solid #bbbbbb; }
+.slider-content .title { padding: 5px 0; text-indent: 10px; background: url("/images/contactlist-bg.png") repeat-x scroll top left #d9d9d9; border-top: 1px solid #bbbbbb; border-bottom: 1px solid #bbbbbb; color: #585858; width: 100%; float: left; font-weight: bold; text-transform: uppercase; }
+.slider-content .selected .title { background: url("/images/contactlist-selected-bg.png") repeat-x scroll top left #d9d9d9; color: #fff; border-top: 1px solid #2d4259; border-bottom: 1px solid #2d4259; }
+.slider .slider-nav { position: absolute; right: 0; top: 0; margin-top: 2px; background: url("/images/contactlist-nav-bg.png") repeat-x scroll top left #e1e1e1; min-height: 150px; border-left: 1px solid #bbbbbb; }
 .slider .slider-nav ul { padding: 5px 0; }
 .slider .slider-nav li a { padding: 3px 15px; line-height: 13px; text-align: center; color: #585858; font-weight: bold; display: block; text-transform: uppercase; cursor: pointer; }
 .slider #debug { position: absolute; bottom: 0; left: 0; padding: 5px; background: #000; color: #fff; }
 /*.slider .arrow { font-size: 0px; line-height: 0%; width: 0px; border-bottom: 8px solid #fff; border-left: 5px solid #333; border-right: 5px solid #333; position: relative; top: 5px; }*/
 .slider .down { border-bottom: none; border-top: 8px solid #fff; top: 15px; }
-.slider .slide-up, .slider .slide-down { height: 20px; background: url("../images/contactlist-bg.png") repeat-x scroll top left #d9d9d9; text-align: center; cursor: pointer; float: right; width: 100%; position: relative; border-top: 1px solid #bbbbbb; border-bottom: 1px solid #bbbbbb; }
+.slider .slide-up, .slider .slide-down { height: 20px; background: url("/images/contactlist-bg.png") repeat-x scroll top left #d9d9d9; text-align: center; cursor: pointer; float: right; width: 100%; position: relative; border-top: 1px solid #bbbbbb; border-bottom: 1px solid #bbbbbb; }
 
 
 

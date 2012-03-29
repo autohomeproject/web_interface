@@ -51,7 +51,7 @@
     <div id="header-surround"><header id="header">
     	
     	<!-- Place your logo here -->
-		<img src="/images/logo.png" alt="Grape" class="logo">
+		<%= image_tag "logo.png", :alt => "autoHome", :class => "logo"  %>
 		
 		<!-- Divider between info-button and the toolbar-icons -->
 		<div class="divider-header divider-vertical"></div>
@@ -179,18 +179,17 @@
     	<!-- Begin of Navigation -->
     	<nav id="nav">
 	    	<ul class="menu collapsible shadow-bottom">
-	    		<li><a href="dashboard.html" class="current"><img src="/images/dashboard.png">Dashboard</a></li>
+	    	<li><a href="/dashboard.html" class="current"><img src="/images/dashboard.png">Dashboard</a></li>
                 <li><a href="/status.html"><img src="/images/compile.png">Status</a></li>	
                 <li><a href="/alerts.html"><img src="/images/exclamation-shield.png">Alerts</a></li>
                 <li><a href="/rooms.html"><img src="/images/door.png">Rooms</a></li>
-                <li><a href="/devices.html"><img src="/images/robot.png">Attached Devices</a></li>	    		 <li><a href="schedule.html"><img src="/images/calendar-month.png">Schedule</a></li>
+                <li><a href="/devices.html"><img src="/images/robot.png">Attached Devices</a></li>
+	    	<li><a href="/schedule.html"><img src="/images/calendar-month.png">Schedule</a></li>
                 <li><a href="/users.html"><img src="/images/user-white.png">Users</a></li>
-                 <li><a href="/preferences.html"><img src="/images/control-power.png">Prefereneces</a></li>
-	    	
-		<li><a href="/log.html"><img src="/images/application-terminal.png">Logs</a></li>    
-     <li><a href="/backup.html"><img src="/images/burn.png">Backup / Restore</a></li>	
-       
-	    	</ul>
+                <li><a href="/preferences.html"><img src="/images/control-power.png">Prefereneces</a></li>
+	    	<li><a href="/log.html"><img src="/images/application-terminal.png">Logs</a></li>    
+    		<li><a href="/backup.html"><img src="/images/burn.png">Backup / Restore</a></li>	
+       	    	</ul>
     	</nav> <!--! end of #nav -->
     	
     </aside> <!--! end of #sidebar -->
@@ -270,6 +269,9 @@
 			validateform.resetForm();
 			$.jGrowl("Blogpost was not created.", { theme: 'error' });
 		});
+		
+		/* DataTables */
+		$('#table-example').dataTable();
 	});
   </script>
   <!-- end scripts-->
