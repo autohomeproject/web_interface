@@ -3,6 +3,8 @@ class RuleSetsController < ApplicationController
   # GET /rule_sets.json
   def index
     @rule_sets = RuleSet.all
+    @condition_sets = ConditionSet.all
+    @action_sets = ActionSet.all
 
     respond_to do |format|
       format.html # index.html.erb
