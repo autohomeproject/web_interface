@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    @locations = Location.all.sort!{ |o1, o2| o1.room.name <=> o2.room.name }
 
     respond_to do |format|
       format.html # index.html.erb

@@ -13,9 +13,9 @@ Autohome::Application.routes.draw do
 
   resources :conditions
 
-  resources :rooms
-
   resources :locations
+
+  resources :rooms
 
   resources :device_types
 

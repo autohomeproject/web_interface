@@ -1,8 +1,12 @@
+
 <div class="grid_4">
         <div class="block-border">
                 <div class="block-header">
-                        <p align="right" ><%= link_to 'Show', @location %> | <%= link_to 'Back', rooms_path %>&nbsp;&nbsp;&nbsp;</p>
-<%= form_for(@location, :html => { :class => "block-content form"} ) do |f| %>
+                        <p align="right" ><%= link_to 'Show', @location %> | <%= link_to 'Back', rooms_path %>
+  &nbsp;&nbsp;&nbsp;</p>
+                </div>
+
+<%= form_for(@location, :html => { :class => "block-content form" }) do |f| %>
   <% if @location.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
@@ -15,22 +19,31 @@
     </div>
   <% end %>
 
+  <br />
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+  <br /><br />
   <div class="field">
     <%= f.label :room_id %><br />
     <%= collection_select :location, :room_id, Room.all, :id, :name %>
   </div>
+  <br /><br />
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <br /><br />
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br />
 <% end %>
-<div class="clear"></div>
+
+
+        <div class="clear"></div>
         </div>
 </div>
+
+

@@ -1,14 +1,15 @@
+<div class="grid12">
     <div class="block-border">
         <div class="block-header">
             <h1>List of Locations</h1>
-	<p align="right" ><%= link_to 'Create New Location', new_location_path %>&nbsp;&nbsp;&nbsp;</p>
+            <p align="right"><%= link_to 'New Location', new_location_path %>&nbsp;&nbsp;&nbsp;</p>
         </div>
         <div class="block-content">
             <table id="table-locations" class="table">
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Floor</th>
+                        <th>Room</th>
                         <th>Description</th>
                         <th></th>
                         <th></th>
@@ -22,14 +23,15 @@
                         <td><%= location.room.name %></td>
                         <td><%= location.description %></td>
                         <td><%= link_to 'Show', location %></td>
-                        <td><%= link_to 'Edit', edit_room_path(location) %></td>
+                        <td><%= link_to 'Edit', edit_location_path(location) %></td>
                         <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
                     </tr>
                 <% end %>
                 </tbody>
             </table>
-        </div>
-    </div>
-
+        </div> <!--block-content-->
+    </div> <!--block-border-->
+</div> <!--grid12-->
 
 <% content_for :ready_js do "$('#table-locations').dataTable();" end %>
+
