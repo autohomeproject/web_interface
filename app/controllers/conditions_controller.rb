@@ -1,3 +1,15 @@
+# This class manages the various individual "Conditions"
+# used in the project. A condition is a simple evaluation
+# function that checks if a device's readings are less than, 
+# greater than, or equal to a specific value.
+#
+# Examples of Conditions:
+#       Is Light Less Than 10 Lux?
+#       Is Door to Closed?
+#       Is Temperature equal to 29C?
+
+# This class processes the web-side portion of things.
+
 class ConditionsController < ApplicationController
   # GET /conditions
   # GET /conditions.json

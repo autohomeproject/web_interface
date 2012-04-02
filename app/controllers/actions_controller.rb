@@ -1,3 +1,14 @@
+# This class manages the various individual "Actions"
+# used in the project. An action is a simple control
+# function that sets a device to a specific value
+# for a specified duration.
+#
+# Examples of actions:
+#       Set Light to 10 Lux for 5 Hours
+#       Set Door to Closed indefinitely
+#       Set Temperature to 29C for 3 Minutes
+
+# This class processes the web-side portion of things.
 class ActionsController < ApplicationController
   # GET /actions
   # GET /actions.json
