@@ -47,7 +47,7 @@
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
   <ul>
-    <li>../app/controllers/locations_controller.rb
+    <li>app/controllers/locations_controller.rb
   </ul>
 </nav>
 
@@ -173,7 +173,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 43</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>])
 
@@ -213,7 +213,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 75</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 74</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-ivar">@location</span>.<span class="ruby-identifier">destroy</span>
@@ -249,7 +249,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 37</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -279,10 +279,9 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 4</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
-
-  <span class="ruby-ivar">@locations</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-ivar">@locations</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">sort!</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">o1</span>, <span class="ruby-identifier">o2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o1</span>.<span class="ruby-identifier">room</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">o2</span>.<span class="ruby-identifier">room</span>.<span class="ruby-identifier">name</span> }
 
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
@@ -315,7 +314,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 27</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">new</span>
 
@@ -350,7 +349,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
@@ -385,7 +384,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File ../app/controllers/locations_controller.rb, line 59</span>
+            <pre><span class="ruby-comment"># File app/controllers/locations_controller.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@location</span> = <span class="ruby-constant">Location</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
