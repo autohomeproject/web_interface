@@ -1,0 +1,43 @@
+<div class="grid_12">
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Condition Sets</h1>
+            <p align="right"><%= link_to 'New Condition Set', new_condition_set_path %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="block-content">
+            <table id="table-condition-sets" class="table">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @condition_sets.each do |condition_set| %>
+  <tr>
+    <td><%= condition_set.name %></td>
+    <td><%= condition_set.description %></td>
+    <td><%= link_to condition_set.user.name, user_path(condition_set.user) %></td>
+    <td><%= link_to 'Show', condition_set %></td>
+    <td><%= link_to 'Edit', edit_condition_set_path(condition_set) %></td>
+    <td><%= link_to 'Destroy', condition_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<br />
+
+<div class="clear height-fix"></div>
+
+<% content_for :ready_js do "$('#table-condition-sets').dataTable();" end %>
+

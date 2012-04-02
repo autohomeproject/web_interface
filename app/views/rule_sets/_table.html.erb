@@ -1,0 +1,44 @@
+
+<div class="grid_12">
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Rule Sets</h1>
+            <p align="right"><%= link_to 'New Rule Set', new_rule_set_path %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="block-content">
+            <table id="table-rules" class="table">
+                <thead>
+                    <tr>
+    <th>Name</th>
+    <th>Condition set</th>
+    <th>Action set</th>
+    <th>User</th>
+    <th>Description</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<% @rule_sets.each do |rule_set| %>
+  <tr>
+    <td><%= rule_set.name %></td>
+    <td><%= link_to rule_set.condition_set.name, condition_set_path(rule_set.condition_set) %></td>
+    <td><%= link_to rule_set.action_set.name, action_set_path(rule_set.action_set) %></td>
+    <td><%= link_to rule_set.user.name, user_path(rule_set.user) %></td>
+    <td><%= rule_set.description %></td>
+    <td><%= rule_set.active %></td>
+    <td><%= link_to 'Show', rule_set %></td>
+    <td><%= link_to 'Edit', edit_rule_set_path(rule_set) %></td>
+    <td><%= link_to 'Destroy', rule_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+			
+<div class="clear height-fix"></div>
+<% content_for :ready_js do "$('#table-rules').dataTable();" end %>
