@@ -1,7 +1,13 @@
-<h1>Listing action_sets</h1>
-
-<table>
-  <tr>
+<div class="grid_12">
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Action Sets</h1>
+            <p align="right"><%= link_to 'New Action Set', new_action_set_path %>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="block-content">
+            <table id="table-actions" class="table">
+                <thead>
+                    <tr>
     <th>Name</th>
     <th>Description</th>
     <th>User</th>
@@ -9,7 +15,8 @@
     <th></th>
     <th></th>
   </tr>
-
+</thead>
+<tbody>
 <% @action_sets.each do |action_set| %>
   <tr>
     <td><%= action_set.name %></td>
@@ -20,8 +27,11 @@
     <td><%= link_to 'Delete', action_set, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Action set', new_action_set_path %>
+</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+			
+<div class="clear height-fix"></div>
+<% content_for :ready_js do "$('#table-actions').dataTable();" end %>
