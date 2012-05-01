@@ -1,10 +1,11 @@
 <% content_for :title do 'Users' end %>
 <h1>Users</h1>
 
-<div class="grid_12">
+<div class="grid12">
     <div class="block-border">
         <div class="block-header">
-            <h1>List of Users</h1><span></span>
+            <h1>List of Users</h1>
+            <p align="right"><%= link_to 'Add New User', new_user_path %>&nbsp;&nbsp;&nbsp;</p>
         </div>
         <div class="block-content">
             <table id="table-users" class="table">
@@ -35,12 +36,13 @@
     <td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
-</tbody>
+                </tbody>
             </table>
-        </div>
-    </div>
-</div>
+        </div> <!--block-content-->
+    </div> <!--block-border-->
+</div> <!--grid12-->
+
+<% content_for :ready_js do "$('#table-users').dataTable();" end %>
+
 			
 <div class="clear height-fix"></div>
-<%= link_to 'New User', new_user_path %>
-<% content_for :ready_js do "$('#table-users').dataTable();" end %>
