@@ -15,6 +15,7 @@
     <th>Room</th>
     <th>Active</th>
     <th>Default value</th>
+    <th>Value</th>
     <th></th>
     <th></th>
     <th></th>
@@ -28,6 +29,7 @@
     <td><%= link_to device.location.room.name, room_path(device.location.room) %></td>
     <td><%= device.active %></td>
     <td><%= device.default_value %></td>
+    <td><%= device.value %></td>
     <td><%= link_to 'Show', device %></td>
     <td><%= link_to 'Edit', edit_device_path(device) %></td>
     <td><%= link_to 'Delete', device, :confirm => 'Are you sure?', :method => :delete %></td>
