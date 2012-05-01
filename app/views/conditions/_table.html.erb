@@ -1,0 +1,40 @@
+<div class="grid12">
+    <div class="block-border">
+        <div class="block-header">
+            <h1>List of Conditions</h1>
+            <p align="right"><%= link_to 'New Condition', new_condition_path %>&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="block-content">
+            <table id="table-conditions" class="table">
+                <thead>
+                    <tr>
+    <th>Condition set</th>
+    <th>Device</th>
+    <th>Comparison</th>
+    <th>Value</th>
+    <th>Json data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+<% @conditions.each do |condition| %>
+  <tr>
+    <td><%= link_to condition.condition_set.name, condition_set_path(condition.condition_set) %></td>
+    <td><%= link_to condition.device.name, device_path(condition.device) %></td>
+    <td><%= condition.comparison_string %></td>
+    <td><%= condition.value.to_s + " " + condition.device.device_type.unit %></td>
+    <td><%= condition.json_data %></td>
+    <td><%= link_to 'Show', condition %></td>
+    <td><%= link_to 'Edit', edit_condition_path(condition) %></td>
+    <td><%= link_to 'Delete', condition, :confirm => 'Are you sure?', :method => :delete %></td>
+ </tr>
+<% end %>
+                </tbody>
+            </table>
+        </div> <!--block-content-->
+    </div> <!--block-border-->
+</div> <!--grid12-->
+
+<% content_for :ready_js do "$('#table-conditions').dataTable();" end %>

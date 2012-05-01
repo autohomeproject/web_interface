@@ -5,6 +5,9 @@ class RuleSetsController < ApplicationController
     @rule_sets = RuleSet.all
     @condition_sets = ConditionSet.all
     @action_sets = ActionSet.all
+    @conditions = Condition.all
+    @actions = Action.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
