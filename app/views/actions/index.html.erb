@@ -1,31 +1,6 @@
-<h1>Listing actions</h1>
+<% content_for :title do 'Actions' end %>
+<h1>Actions</h1>
 
-<table>
-  <tr>
-    <th>Action set</th>
-    <th>Device</th>
-    <th>Value</th>
-    <th>Duration</th>
-    <th>Json data</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <%= render "actions_table" %>
 
-<% @actions.each do |action| %>
-  <tr>
-    <td><%= link_to action.action_set.name, action_set_path(action.action_set) %></td>
-    <td><%= link_to action.device.name, device_path(action.device) %></td>
-    <td><%= action.value.to_s + ' ' + action.device.device_type.unit %></td>
-    <td><%= action.duration %></td>
-    <td><%= action.json_data %></td>
-    <td><%= link_to 'Show', action %></td>
-    <td><%= link_to 'Edit', edit_action_path(action) %></td>
-    <td><%= link_to 'Delete', action, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Action', new_action_path %>
+<div class="clear height-fix"></div>
